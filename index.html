@@ -7,7 +7,7 @@
 
     <meta name="description" content="Orçamento de projeto elétrico conforme exigências da CEMIG. Atendimento rápido via WhatsApp.">
 
-    <!-- ===== TAG GOOGLE ADS (BASE) ===== -->
+    <!-- TAG GOOGLE ADS (BASE) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-8045114511"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -29,7 +29,7 @@
             color: #1c1c1c;
         }
 
-        /* ===== HEADER FIXO COM TARJA ===== */
+        /* ===== HEADER FIXO REAL ===== */
         .top-header {
             position: fixed;
             top: 0;
@@ -62,15 +62,14 @@
         }
 
         .menu-pill a {
-            position: relative;
             text-decoration: none;
             font-size: 13px;
             letter-spacing: 1px;
             color: #1c1c1c;
+            position: relative;
             padding-bottom: 4px;
         }
 
-        /* underline oculto */
         .menu-pill a::after {
             content: "";
             position: absolute;
@@ -79,10 +78,11 @@
             width: 0;
             height: 2px;
             background: #007bff;
+            transition: width .3s;
         }
 
-        /* underline SOMENTE no hover */
-        .menu-pill a:hover::after {
+        .menu-pill a:hover::after,
+        .menu-pill a.active::after {
             width: 100%;
         }
 
@@ -91,7 +91,6 @@
             display: none;
             font-size: 28px;
             cursor: pointer;
-            user-select: none;
         }
 
         /* ===== MENU MOBILE ===== */
@@ -141,7 +140,7 @@
 
         .btn-whatsapp {
             background: #25D366;
-            color: #ffffff;
+            color: #fff;
             padding: 20px 40px;
             font-size: 18px;
             font-weight: bold;
@@ -160,7 +159,7 @@
             text-align: center;
             font-size: 12px;
             color: #777;
-            padding: 20px 10px 24px;
+            padding: 20px 10px 25px;
             border-top: 1px solid #eee;
         }
 
@@ -190,7 +189,6 @@
 </head>
 <body>
 
-<!-- ===== HEADER ===== -->
 <header class="top-header">
     <div class="header-wrapper">
         <a href="https://www.dct.eng.br/">
@@ -200,7 +198,7 @@
         <div class="hamburger" onclick="toggleMenu()">☰</div>
 
         <nav class="menu-pill">
-            <a href="https://www.dct.eng.br/">INÍCIO</a>
+            <a href="https://www.dct.eng.br/" class="active">INÍCIO</a>
             <a href="https://www.dct.eng.br/serviyos">SERVIÇOS</a>
             <a href="https://www.dct.eng.br/clientes">CLIENTES</a>
             <a href="https://www.dct.eng.br/fale-conosco">FALE CONOSCO</a>
@@ -209,7 +207,6 @@
     </div>
 </header>
 
-<!-- ===== MENU MOBILE ===== -->
 <div id="mobileMenu" class="mobile-menu">
     <a href="https://www.dct.eng.br/">INÍCIO</a>
     <a href="https://www.dct.eng.br/serviyos">SERVIÇOS</a>
@@ -218,7 +215,6 @@
     <a href="https://www.dct.eng.br/localizayuo">LOCALIZAÇÃO</a>
 </div>
 
-<!-- ===== HERO ===== -->
 <section class="hero">
     <h1>Projeto Elétrico conforme exigências da CEMIG</h1>
 
@@ -238,7 +234,6 @@
     </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
 <footer>
     <div>DCT Engineering • faleconosco@dct.eng.br</div>
     <div>Rua João Souto, 825-A • Centro • Montes Claros-MG</div>
