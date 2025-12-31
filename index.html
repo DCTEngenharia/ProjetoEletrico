@@ -25,53 +25,52 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #f4f6f8;
+            background: #ffffff;
             color: #1c1c1c;
         }
 
-        /* ===== HEADER ===== */
+        /* ===== HEADER FIXO COM TARJA ===== */
         .top-header {
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 20px 0;
-            background: transparent;
+            background: #f2f3f5;
             z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
         }
 
         .header-wrapper {
             max-width: 1300px;
             margin: auto;
-            padding: 0 30px;
+            padding: 14px 24px;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
         .logo img {
-            height: 60px;
+            height: 52px;
         }
 
         /* ===== MENU DESKTOP ===== */
         .menu-pill {
             background: #ffffff;
-            padding: 12px 28px;
+            padding: 10px 26px;
             border-radius: 50px;
             display: flex;
-            align-items: center;
-            gap: 28px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            gap: 26px;
         }
 
         .menu-pill a {
             position: relative;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 13px;
             letter-spacing: 1px;
             color: #1c1c1c;
-            padding-bottom: 6px;
+            padding-bottom: 4px;
         }
 
+        /* underline oculto */
         .menu-pill a::after {
             content: "";
             position: absolute;
@@ -80,18 +79,17 @@
             width: 0;
             height: 2px;
             background: #007bff;
-            transition: width 0.3s ease;
         }
 
-        .menu-pill a:hover::after,
-        .menu-pill a.active::after {
+        /* underline SOMENTE no hover */
+        .menu-pill a:hover::after {
             width: 100%;
         }
 
         /* ===== HAMBURGER ===== */
         .hamburger {
             display: none;
-            font-size: 32px;
+            font-size: 28px;
             cursor: pointer;
             user-select: none;
         }
@@ -100,93 +98,74 @@
         .mobile-menu {
             display: none;
             position: fixed;
-            top: 95px;
+            top: 78px;
             left: 50%;
             transform: translateX(-50%);
-            background: #ffffff;
             width: 92%;
-            border-radius: 22px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.18);
+            background: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
             z-index: 999;
-            padding: 22px 0;
             text-align: center;
         }
 
         .mobile-menu a {
             display: block;
-            padding: 14px 0;
+            padding: 14px;
             text-decoration: none;
             color: #1c1c1c;
-            font-size: 15px;
-            letter-spacing: 1px;
-        }
-
-        .mobile-menu a:not(:last-child) {
+            font-size: 14px;
             border-bottom: 1px solid #eee;
         }
 
         /* ===== HERO ===== */
         .hero {
-            margin-top: 140px;
-            padding: 110px 20px;
-            background: #ffffff;
+            margin-top: 120px;
+            padding: 90px 20px 70px;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 36px;
-            margin-bottom: 25px;
+            font-size: 34px;
+            margin-bottom: 22px;
         }
 
         .hero p {
-            max-width: 820px;
+            max-width: 780px;
             margin: auto;
-            font-size: 18px;
+            font-size: 17px;
             color: #555;
             line-height: 1.6;
-            margin-bottom: 55px;
-        }
-
-        /* ===== BOTÃO CENTRAL ===== */
-        .cta-container {
-            display: flex;
-            justify-content: center;
+            margin-bottom: 45px;
         }
 
         .btn-whatsapp {
             background: #25D366;
             color: #ffffff;
-            padding: 22px 42px;
+            padding: 20px 40px;
             font-size: 18px;
             font-weight: bold;
-            border-radius: 12px;
+            border-radius: 10px;
             text-decoration: none;
-            transition: background 0.2s ease, transform 0.2s ease;
-        }
-
-        .btn-whatsapp:hover {
-            background: #1ebe5d;
-            transform: scale(1.03);
         }
 
         .info {
-            margin-top: 35px;
-            font-size: 14px;
-            color: #777;
-        }
-
-        /* ===== FOOTER ===== */
-        footer {
-            background: #f4f6f8;
-            padding: 40px 20px;
-            text-align: center;
+            margin-top: 26px;
             font-size: 13px;
             color: #777;
         }
 
-        footer span {
-            display: block;
-            margin-top: 6px;
+        /* ===== FOOTER COMPACTO ===== */
+        footer {
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+            padding: 20px 10px 24px;
+            border-top: 1px solid #eee;
+        }
+
+        footer div {
+            margin-top: 4px;
         }
 
         /* ===== MOBILE ===== */
@@ -200,11 +179,11 @@
             }
 
             .hero h1 {
-                font-size: 28px;
+                font-size: 26px;
             }
 
             .hero p {
-                font-size: 16px;
+                font-size: 15px;
             }
         }
     </style>
@@ -214,16 +193,14 @@
 <!-- ===== HEADER ===== -->
 <header class="top-header">
     <div class="header-wrapper">
-        <div class="logo">
-            <a href="https://www.dct.eng.br/">
-                <img src="https://i.imgur.com/Jfm7qFu.png" alt="DCT Engineering">
-            </a>
-        </div>
+        <a href="https://www.dct.eng.br/">
+            <img src="https://i.imgur.com/Jfm7qFu.png" alt="DCT Engineering" class="logo">
+        </a>
 
         <div class="hamburger" onclick="toggleMenu()">☰</div>
 
         <nav class="menu-pill">
-            <a href="https://www.dct.eng.br/" class="active">INÍCIO</a>
+            <a href="https://www.dct.eng.br/">INÍCIO</a>
             <a href="https://www.dct.eng.br/serviyos">SERVIÇOS</a>
             <a href="https://www.dct.eng.br/clientes">CLIENTES</a>
             <a href="https://www.dct.eng.br/fale-conosco">FALE CONOSCO</a>
@@ -251,12 +228,10 @@
         ou regularização. Atendimento rápido, com engenheiro habilitado e ART.
     </p>
 
-    <div class="cta-container">
-        <a class="btn-whatsapp"
-           href="https://wa.me/5538984099441?text=Olá%2C%20gostaria%20de%20orçamento%20para%20projeto%20elétrico%20conforme%20exigências%20da%20CEMIG.">
-            👉 Solicitar orçamento no WhatsApp
-        </a>
-    </div>
+    <a class="btn-whatsapp"
+       href="https://wa.me/5538984099441?text=Olá%2C%20gostaria%20de%20orçamento%20para%20projeto%20elétrico%20conforme%20exigências%20da%20CEMIG.">
+        👉 Solicitar orçamento no WhatsApp
+    </a>
 
     <div class="info">
         Atendimento humano • Orçamento rápido • Conformidade CEMIG
@@ -265,9 +240,8 @@
 
 <!-- ===== FOOTER ===== -->
 <footer>
-    <span>DCT Engineering</span>
-    <span>faleconosco@dct.eng.br</span>
-    <span>Rua João Souto, 825-A • Centro • Montes Claros-MG</span>
+    <div>DCT Engineering • faleconosco@dct.eng.br</div>
+    <div>Rua João Souto, 825-A • Centro • Montes Claros-MG</div>
 </footer>
 
 <script>
